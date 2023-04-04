@@ -1,0 +1,275 @@
+body {
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    color: var(--black);
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+main {
+    background: var(--white);
+
+    width: calc(100% -  4rem);
+    max-width: 21.4rem;
+    padding-block: 3rem;
+    padding-inline: 1.5rem;
+
+    margin: 0 1rem;
+    border-radius: 1rem 1rem 1rem;
+    border-bottom-right-radius: 5rem;
+}
+
+form {
+    position: relative;
+
+    display: flex;
+    gap: 1rem;
+
+    padding-block-end: 4.3rem;
+
+    border-bottom: 0.15rem solid var(--line);
+
+}
+
+form > div {
+    position: relative;
+    width: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+form > div > p {
+    position: absolute;
+    bottom: -2rem;
+    color: var(--red);
+    line-height: 0.7rem;
+
+    font-size: 0.7rem;
+}
+
+form > div > input[type=number] {
+    font-family: var(--font-family);
+
+    padding-inline: 1rem;
+    padding-block: 0.75rem;
+
+    font-size: var(--heading-m-size);
+    font-weight: var(--heading-m-weight);
+    color: var(--black);
+    border: 0.124rem solid var(--line);
+
+    border-radius: 0.5rem;
+}
+
+form > div > input[type="number"].error:focus,
+form > div > input[type=number].error {
+    border: 0.124rem solid var(--red);
+}
+
+form > div > label {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 18px;
+    
+    color: var(--grey);
+
+    margin-bottom: 0.5rem;
+}
+
+form > div > label.error {
+    color: var(--red);
+}
+
+
+form > div > input[type="number"]::placeholder {
+    font-size: var(--heading-m-size);
+    font-weight: var(--heading-m-weight);
+    color: var(--grey);
+
+    text-transform: uppercase;
+}
+
+form > div > input[type="number"]::value {
+    font-weight: var(--heading-m-weight);
+}
+
+form > div > input[type="number"]:focus {
+    border: 0.12rem solid var(--purple);
+    outline: none;
+
+}
+
+#submit-image {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#submit-image img {
+    width: 30px;
+}
+
+form input[type=submit] {
+
+    width: 64px;
+    height: 64px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--purple) url("/images/button-logo.png") no-repeat center center;
+    background-size: 30px 30px;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: background 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+form input[type=submit]:hover {
+    background: var(--black) url("/images/button-logo.png") no-repeat center center;
+    background-size: 30px 30px;
+}
+
+
+
+.output {
+    padding-block-start: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.output > * > h1 {
+    font-size: var(--heading-l-size);
+    font-weight: var( --heading-l-weight);
+    font-style: italic;
+    
+    line-height: 110%;
+
+}
+
+.output > *  > h1 > span {
+    color: var(--purple);
+
+}
+
+
+
+
+@media screen and (max-width: 360px) {
+    body {
+        max-width: 360px;
+
+    }
+
+
+    :root {
+        --body-size: 0.7rem;
+        --heading-l-size: 2rem;
+        --heading-m-size: 0.8rem;
+        --heading-s-size: var(--body-size);
+    }
+
+    main {
+        width: calc(100% - 3rem);
+        margin: 0 1.5rem;
+    }
+
+    form {
+        padding-block-end: 3.5rem;
+    }
+
+    form > div {
+        width: 4.5rem;
+    }
+    
+    form > div > label {
+        margin-bottom: 0;
+
+    }
+
+    form > div > p {
+        bottom: -1.6rem;
+
+        font-size: 0.6rem;
+    }
+
+    form input[type=submit] {
+        width: 50px;
+        height: 50px;
+    }
+
+    .output {
+        padding-block-start: 3.5rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 1020px) {
+    :root {
+
+        --body-size: 0.875rem;
+        --heading-l-size: 6.5rem;
+        --heading-m-size: 2rem;
+        --heading-s-size: var(--body-size);
+    }
+
+
+    main {
+        max-width: 52.5rem;
+    
+        padding: 3.5rem;
+
+        border-radius: 2rem;
+        border-bottom-right-radius: 10rem;
+
+    }
+
+    form {
+        gap: 2rem;
+    }
+    
+    #submit-image {
+        top: unset;
+        left: unset;
+        right: 17px;
+        bottom: -12%;
+        transform: unset;
+    }
+    
+
+    form input[type=submit] {
+        top: unset;
+        left: unset;
+        right: 0;
+        bottom: -20%;
+        transform: unset;       
+
+    }
+
+    form > div {
+        width: 10rem;
+
+    }
+
+    form > div > p { 
+        bottom: -1.5rem;
+
+        font-size: 0.9rem;
+    }
+}
