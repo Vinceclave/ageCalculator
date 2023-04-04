@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="age-calculator">
+        <form action="" class="age-calculator-inputs">
+            <div class="day-inputField">
+                <label for="day-input">Day</label>
+                <input type="number" id="day-input" placeholder="dd" min="1" max="31">
+                <p id="day-error" class="error-text"></p>
+              </div>
+              
+              <div class="month-inputField">
+                <label for="month-input">Month</label>
+                <input type="number" id="month-input" placeholder="mm" min="1" max="12">
+                <p id="month-error" class="error-text"></p>
+              </div>
+              
+              <div class="year-inputField">
+                <label for="year-input">Year</label>
+                <input type="number" id="year-input" placeholder="yyyy" min="1970" max="2023">
+                <p id="year-error" class="error-text"></p>
+              </div>
+            
+            <input type="submit" id="submit-btn" value="">
+        </form>
+        <div class="output">
+            <div class="year-output">
+                <h1><span class="year">--</span> years</h1>
+            </div>
+    
+            <div class="months-output">
+                <h1><span class="month">--</span> months</h1>
+            </div>
+    
+            <div class="days-output">
+                <h1><span class="days">--</span> days</h1>
+            </div>
+        </div>
+    </main>
+
+    <footer>Challenge by Frontend Mentor. Coded by Mr Beans.</footer>
+    <script src="main.js"></script>
+</body>
+</html>
